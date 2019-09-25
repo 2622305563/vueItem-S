@@ -1,5 +1,7 @@
 <template>
-  <div id="home">{{data}}</div>
+  <div id="home">{{data}}
+    <div>你好</div>
+  </div>
 </template>
 
 <script>
