@@ -9,7 +9,8 @@ export default {
   name: "home",
   data() {
     return {
-      data: ""
+      data: "",
+      addObj: {},
     };
   },
   mounted() {
@@ -18,6 +19,8 @@ export default {
   methods: {
     getData() {
       this.data = "成功";
+      this.$set(this.addObj,'name','zhangsan','age','12')
+      console.log("addObj",this.addObj)
     }
   }
 };
