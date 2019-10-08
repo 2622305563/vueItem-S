@@ -1,6 +1,6 @@
 <template>
   <div id="home">{{data}}
-    <div>你好</div>
+    <button @click="button()">点击</button>
   </div>
 </template>
 
@@ -14,13 +14,19 @@ export default {
     };
   },
   mounted() {
-    this.getData();
+    // setTimeout(this.getData(),10000)
+    // this.getData();
   },
   methods: {
     getData() {
       this.data = "成功";
       this.$set(this.addObj,'name','zhangsan','age','12')
       console.log("addObj",this.addObj)
+      alert("延迟加载")
+    },
+    button() {
+      console.log('getData函数属性',this.getData,typeof(this.getData))
+      setTimeout(this.getData,500)
     }
   }
 };
